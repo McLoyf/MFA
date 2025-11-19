@@ -1,0 +1,167 @@
+/* === Shared Base === */
+:root {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+  color-scheme: dark;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #0b1220;
+  color: #e6eef8;
+}
+
+/* === Form Card Container === */
+.wrapper {
+  width: min(400px, 90%);
+  background: linear-gradient(180deg, #0f1724 0%, #071227 100%);
+  border-radius: 12px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.index-wrapper {
+  width: min(250px, 90%);
+  background: linear-gradient(180deg, #0f1724 0%, #071227 100%);
+  border-radius: 12px;
+  padding: 3em 1em;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+/* === Headings === */
+h1 {
+  font-size: 22px;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.6px;
+  color: #d5e1f5;
+}
+
+/* === Input Boxes === */
+.input-box {
+  width: 100%;
+  margin-bottom: 1.1rem;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  color: #e6eef8;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.input-box input:focus {
+  outline: none;
+  border-color: #45f3ff;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* === Buttons === */
+.button {
+  background: #172a45;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #e6eef8;
+  font-size: 15px;
+  font-weight: 600;
+  width: 100%;
+  padding: 12px 0;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.1s ease;
+}
+
+.button:hover {
+  background: #1b355a;
+  transform: scale(1.02);
+}
+
+.button:active {
+  background: #0ff;
+  color: #000;
+  transform: scale(0.98);
+}
+
+/* === Forgot password / Links === */
+.forgot, .bottom-link {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.forgot a, .bottom-link a {
+  color: #9fb0c9;
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s ease;
+}
+
+.forgot a:hover, .bottom-link a:hover {
+  color: #45f3ff;
+  text-decoration: underline;
+}
+
+/* === Output messages === */
+#output {
+  margin-top: 1rem;
+  font-size: 14px;
+  color: #9fb0c9;
+  text-align: center;
+}
+
+
+.header {
+  position: absolute;
+  top: 0;                     /* stick to top */
+  left: 0;
+  width: 100%;                /* full width */
+  display: flex;
+  justify-content: center;    /* center the nav group horizontally */
+  align-items: center;
+  padding: 2rem 0;
+  background-color: rgba(30, 30, 40, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 1000;
+}
+
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.index-link a {
+  text-decoration: none;
+  color: #e6eef8;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.index-link a:hover {
+  color: #45f3ff;
+}
+
+.logo img {
+  position: absolute;
+  left: 2rem;
+  top: 1rem;
+  height: 50px;
+  width: auto;
+  border-radius: 8px;
+}
+
+.bottom-link{
+  position: absolute;
+  bottom: 1em;;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="index-page">
+<div class="index-wrapper">
+  <a href="./pages/login.html">Login</a>
+  <a href="./pages/signup.html">Signup</a>
+</div>
+
+
+<script>
+  // ===========================
+  //  Login State Checker
+  // ===========================
+  const username = localStorage.getItem("username");
+
+  const loginLink = document.getElementById("loginLink");
+  const signupLink = document.getElementById("signupLink");
+  const userDisplay = document.getElementById("userDisplay");
+  const logoutBtn = document.getElementById("logoutBtn");
+  const loginWarning = document.getElementById("loginWarning");
+
+  if (username) {
+    // User IS logged in
+    userDisplay.textContent = "Logged in as: " + username;
+
+    loginLink.style.display = "none";
+    signupLink.style.display = "none";
+    logoutBtn.style.display = "inline-block";
+  }
+
+  // ===========================
+  //  Logout functionality
+  // ===========================
+  logoutBtn.addEventListener("click", () => {
+    localStorage.removeItem("username");
+    window.location.reload();  // refresh the page so UI updates
+  });
+</script>
+
+</body>
+</html>
